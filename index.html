@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi proyecto pràctica</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Formulario Animado</title>    
 </head>
 <body>
-    
-</body>
-</html>
+    <form action="" class="formulario">
+        <h1 class="formulario__titulo">Contáctenos</h1>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Nombres</label>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Correo</label>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Teléfono</label>
+        <input type="text" class="formulario__input">
+        <label for="" class="formulario__label">Mensaje</label>
+        <input type="submit" class="formulario__submit">
+    </form>
+
+
+     
+        
+        
+        
+        
+        <script>var inputs = document.getElementsByClassName ('formulario__input');
+for (var i=0; i<inputs.length; i++) {
+    inputs [i].addEventListener('keyup', function(){
+        if(this.value.length>=1) {
+            this.nextElementSibling.classList.add('fijar');
+        } else {
+            this.nextElementSibling.classList.remove('fijar');
+        }
+    });
+} </script> 
+      
+    </body>
+    </html>
